@@ -1,0 +1,72 @@
+.header,
+.header * {
+  box-sizing: border-box;
+}
+.header {
+  position: relative;
+}
+.header2 {
+  background: linear-gradient(
+    90deg,
+    rgba(75, 141, 121, 1) 1.9999999552965164%,
+    rgba(75, 36, 109, 1) 51.541244983673096%,
+    rgba(106, 81, 127, 1) 80.8248519897461%
+  );
+  width: 1440px;
+  height: 121px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.bienvenue {
+  color: #80ff1e;
+  text-align: center;
+  font-family: "Parisienne-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 68px;
+  top: 29px;
+  width: 171px;
+  height: 64px;
+}
+.presentation {
+  color: #80ff1e;
+  text-align: center;
+  font-family: "Parisienne-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 419px;
+  top: 29px;
+  width: 218px;
+  height: 64px;
+}
+.competences {
+  color: #80ff1e;
+  text-align: center;
+  font-family: "Parisienne-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 818px;
+  top: 29px;
+  width: 205px;
+  height: 64px;
+}
+.projets {
+  color: #80ff1e;
+  text-align: center;
+  font-family: "Parisienne-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 1201px;
+  top: 29px;
+  width: 171px;
+  height: 64px;
+}
