@@ -1,72 +1,227 @@
-.header,
-.header * {
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+/* Header */
 .header {
-  position: relative;
-}
-.header2 {
   background: linear-gradient(
     90deg,
-    rgba(75, 141, 121, 1) 1.9999999552965164%,
-    rgba(75, 36, 109, 1) 51.541244983673096%,
-    rgba(106, 81, 127, 1) 80.8248519897461%
+    rgba(75, 141, 121, 1) 2%,
+    rgba(75, 36, 109, 1) 52%,
+    rgba(106, 81, 127, 1) 81%
   );
-  width: 1440px;
-  height: 121px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  width: 100%;
+  height: 200px;
+  text-align: center;
 }
-.bienvenue {
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+/* text */
+nav a {
+  padding-left: 80px;
+  /* padding: 80px; - ось тут була проблема! через нього футер не міг зміститися донизу*/
   color: #80ff1e;
   text-align: center;
-  font-family: "Parisienne-Regular", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  text-decoration: underline;
-  position: absolute;
-  left: 68px;
-  top: 29px;
-  width: 171px;
-  height: 64px;
+  font-family: "Parisienne";
+  font-size: 60px;
+
+  text-decoration: none;
 }
-.presentation {
+
+nav a:hover {
+  color: #95737c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Bienvenue */
+.Bienvenue {
+  margin-top: 5%;
+  width: 100%;
+  height: 550px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.Bienvenue::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./photo/digital-1742687_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+h1 {
   color: #80ff1e;
   text-align: center;
-  font-family: "Parisienne-Regular", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  text-decoration: underline;
-  position: absolute;
-  left: 419px;
-  top: 29px;
-  width: 218px;
-  height: 64px;
+  font-family: "Parisienne";
+  font-size: 100px;
 }
-.competences {
+
+/* Presentation */
+.presentation-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.presentation-flex {
+  padding-top: 5%;
+  background: linear-gradient(
+    90deg,
+    rgba(75, 141, 121, 1) 2%,
+    rgba(75, 36, 109, 1) 52%,
+    rgba(106, 81, 127, 1) 81%
+  );
+  width: 100%;
+  height: 50%;
+}
+.presentation-flex img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  position: center;
+  margin: 30px 16px;
+  padding: 5px;
+  background: #3b0848;
+}
+h2 {
+  font-family: "Parisienne";
+  font-size: 50px;
+}
+.Text {
+  color: #ffffff;
+  text-align: justify;
+  padding-right: 1%;
+  padding-left: 2%;
+  font-family: "Merienda-Regular", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+}
+
+/* Competences */
+
+.Competences {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.competence-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: calc(25% - 30px);
+  max-width: 300px;
+}
+.competence-flex img {
+  width: 189px;
+  height: 166px;
+  object-fit: cover;
+}
+
+/* Projets */
+.projets-container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  width: 98%;
+  gap: 20px;
+  background: radial-gradient(
+    closest-side,
+    rgba(75, 36, 109, 1) 0%,
+    rgba(75, 141, 121, 1) 2%,
+    rgba(106, 81, 127, 1) 82%
+  );
+  padding: 15px;
+  border-radius: 10px;
+  /* justify-content: space-around; */
+}
+.projet-flex {
+  display: flex;
+  flex: 1 1 calc(50% - 20px);
+  align-items: center;
+  background: #4b246d;
+  padding-left: 10px;
+  border: 2px solid #24040f;
+  border-radius: 8px;
+  gap: 5px;
+  box-sizing: border-box;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.projet-flex img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  /* margin-bottom: 5px; */
+}
+.content h2 {
   color: #80ff1e;
   text-align: center;
-  font-family: "Parisienne-Regular", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  text-decoration: underline;
-  position: absolute;
-  left: 818px;
-  top: 29px;
-  width: 205px;
-  height: 64px;
 }
-.projets {
+.content Text {
+  font-size: 20px;
+  font-weight: 300;
+}
+.button {
   color: #80ff1e;
   text-align: center;
-  font-family: "Parisienne-Regular", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  text-decoration: underline;
-  position: absolute;
-  left: 1201px;
-  top: 29px;
-  width: 171px;
-  height: 64px;
+  font-family: "Parisienne";
+  font-size: 50px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(75, 141, 121, 1) 2%,
+    rgba(75, 36, 109, 1) 52%,
+    rgba(106, 81, 127, 1) 81%
+  );
+  width: 98%;
+  height: 250px;
+}
+.footer {
+  text-align: center;
+  padding: 40px 15px;
+  margin-top: 25px;
+}
+/* display: flex;
+  justify-content: space-between; */
+/* align-items: center; */
+/* box-sizing: border-box; */
+/* position: sticky; */
+
+.footer img {
+  border-radius: 15px;
+  width: 109px;
+  height: 99px;
+  left: 417px;
+  top: 50px;
+  object-fit: cover;
 }
