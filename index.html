@@ -156,7 +156,7 @@
             <!-- <img src="" alt="" /> -->
             <div class="content">
             <h2></h2>
-            <p class="Text">         </p>
+            <p class="Text"></p>
             </div>
         </article>
         </div>
@@ -167,6 +167,7 @@
     </main>
     <footer class="footer">
       <nav>
+        <div class="icons">
         <a href="https://www.linkedin.com/in/daria-marchenko-544bb3339/"
           ><img src="./photo/linked-in-2668696_640.png" alt="Linkedin"
         /></a>
@@ -174,7 +175,36 @@
           ><img src="./photo/logo-2582757_640.png" alt="GitHub"
         /></a>
         <a href="#"><img src="./photo/cv-5973796_640.png" alt="CV" /></a>
-       <h2><a href="#">Contactez moi</a></h2>
+      </div>
+        <!-- Contact -->
+      <label for="modalToggle" class="openModalButton">Contactez-moi</label>
+      <input type="checkbox" id="modalToggle" class="modalCheckbox">
+
+      <div class="modal">
+      <div class="modal-content">
+      <h4>Contactez-moi</h4>
+    <p><strong>Phone:</strong> +3603401367</p>
+    <p><strong>Email:</strong> daria.marchenko@laplateforme.io</p>
+
+      <!-- button pour fermer -->
+       <label for="modalToggle" class="close">&times;</label>
+    <h4>Envoyez le message</h4>
+
+      <form action="/submit_form" method="post">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="contact-btn">Envoyer</button>
+      </form>
+
+      </div>
+      </div>
       </nav>
     </footer>
 </html>
